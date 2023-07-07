@@ -1,5 +1,5 @@
 {
-  "name": "@bot-whatsapp/root",
+  "name": "@bot-whatsapp/portal",
   "version": "0.1.29",
   "description": "Bot de wahtsapp open source para MVP o pequeños negocios",
   "private": true,
