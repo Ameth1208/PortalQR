@@ -1,4 +1,4 @@
-const { join } = require('path')
+const { join } = require('path');
 const { createReadStream, existsSync } = require('fs')
 const { bgYellow, cyan, yellow } = require('kleur')
 const polka = require('polka')
@@ -54,6 +54,3 @@ const start = (args) => {
 }
 
 module.exports = start
-
-
-// "url": "https://github.com/codigoencasa/bot-whatsapp/tree/main/packages/portal"
