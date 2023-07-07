@@ -4,7 +4,7 @@
   "description": "Bot de wahtsapp open source para MVP o pequeños negocios",
   "private": true,
   "scripts": {
-    "portal:rollup": "rollup --config ./packages/portal/rollup-portal.config.js",
+    "portal:rollup": "rollup --config .lib/rollup-portal.config.js",
     "build:portal-web": "cd ./packages/portal/ && pnpm run build.types && pnpm run build.client && pnpm run build.server && pnpm run lint --fix",
     "build:full": "pnpm run build:portal-web && pnpm run cli:rollup && pnpm run bot:rollup && pnpm run provider:rollup && pnpm run database:rollup && pnpm run contexts:rollup && pnpm run create-bot-whatsapp:rollup && pnpm run portal:rollup"
   },
