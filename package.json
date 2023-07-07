@@ -1,5 +1,5 @@
 {
-  "name": "@gamastudio/portal",
+  "name": "@bot-whatsapp/portal",
   "version": "0.0.44-alpha.0",
   "description": "Portal WEB para escanear QR",
   "main": "./lib/portal.http.cjs",
