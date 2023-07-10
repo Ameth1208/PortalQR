@@ -15,8 +15,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm ci
       - run: npm run build
+      - run: npm run portal:rollup
+      - run: npm ci
   
 
   publish-gpr:
@@ -31,8 +32,8 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
       - run: npm run build
-      - run: npm publish
+      - run: npm run portal:rollup
+      - run: npm ci
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
