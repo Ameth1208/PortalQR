@@ -1,5 +1,5 @@
 {
-  "name": "@bot-whatsapp/portal",
+  "name": "@ameth1208/@bot-whatsapp/portal",
   "version": "0.1.29",
   "description": "Portal WEB para escanear QR",
   "main": "./lib/portal.http.cjs",
