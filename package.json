@@ -48,5 +48,8 @@
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
     "qwik": "qwik"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@ameth1208"
   }
 }
