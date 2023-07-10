@@ -16,8 +16,8 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
-      - run: npm run build
-      - run: npm run build.portal
+      - run: npm run build.full
+      
   
 
   publish-gpr:
@@ -33,7 +33,7 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: npm run build
-      - run: npm run build.portal
+      - run: npm run build.full
+      
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
