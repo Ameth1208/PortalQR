@@ -3,6 +3,7 @@
   "version": "0.1.31",
   "description": "Portal WEB para escanear QR",
   "main": "./lib/portal.http.cjs",
+  "types": "module",
   "files": [
     "./dist/*",
     "./lib/portal.http.cjs"
@@ -31,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ameth1208/PortalQR"
+    "url": "https://github.com/Ameth1208/PortalQR.git"
   },
   "scripts": {
     "build": "qwik build",
