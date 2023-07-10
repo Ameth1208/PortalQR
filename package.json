@@ -50,6 +50,6 @@
     "qwik": "qwik"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@ameth1208"
+    "registry": "https://github.com/Ameth1208/PortalQR/@ameth1208"
   }
 }
