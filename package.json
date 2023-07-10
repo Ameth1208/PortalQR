@@ -41,7 +41,7 @@
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.server": "vite build -c adaptors/static/vite.config.ts",
     "build.types": "tsc --incremental --noEmit",
-    "portal:rollup": "rollup --config ./rollup-portal.config.js",
+    "build.portal": "rollup --config ./rollup-portal.config.js",
     "deploy": "echo 'Run \"npm run qwik add\" to install a server adaptor'",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
