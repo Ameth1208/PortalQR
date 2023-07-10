@@ -1,8 +1,10 @@
 {
-  "name": "portal",
-  "version": "0.1.29",
+  "name": "@ameth1208/portal",
+  "version": "0.1.0",
+  "author": "amethgm@gmail.com",
   "description": "Portal WEB para escanear QR",
   "main": "./lib/portal.http.cjs",
+  "types": "module",
   "files": [
     "./dist/*",
     "./lib/portal.http.cjs"
@@ -31,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ameth1208/PortalQR"
+    "url": "https://github.com/Ameth1208/PortalQR.git"
   },
   "scripts": {
     "build": "qwik build",
@@ -50,6 +52,6 @@
     "qwik": "qwik"
   },
   "publishConfig": {
-    "registry": "https://github.com/Ameth1208/PortalQR/@ameth1208"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
