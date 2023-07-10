@@ -1,6 +1,6 @@
 {
-  "name": "portal",
-  "version": "0.1.29",
+  "name": "@ameth1208/portal-qr",
+  "version": "0.1.31",
   "description": "Portal WEB para escanear QR",
   "main": "./lib/portal.http.cjs",
   "files": [
@@ -50,6 +50,6 @@
     "qwik": "qwik"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@ameth1208"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
