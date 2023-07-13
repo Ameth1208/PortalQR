@@ -16,7 +16,7 @@
 
 ## Example:
 
-![](./.github\webPortal.png)
+![](https://github.com/Ameth1208/PortalQR/blob/main/.github/webPortal.png)
 
 ## Estructura
 
