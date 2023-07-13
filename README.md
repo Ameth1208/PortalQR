@@ -1,22 +1,28 @@
-# Qwik City App ⚡️
+# Custom PortalQR
+
+- [Insgram](https://instagram.com/ameth12_08?igshid=NGExMmI2YTkyZg==) un Follow para apoyar ⭐
+
+- [GitHub](https://github.com/Ameth1208/) GitHub personal.
 
 - [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
+
 - [Qwik GitHub](https://github.com/BuilderIO/qwik)
+
 - [@QwikDev](https://twitter.com/QwikDev)
+
 - [Vite](https://vitejs.dev/)
 
 ---
 
-## Project Structure
+## Example:
 
-This project is using Qwik with [QwikCity](https://qwik.builder.io/qwikcity/overview/). QwikCity is just a extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+![](./.github\webPortal.png)
 
-Inside your project, you'll see the following directory structure:
+## Estructura
+
+La estructura de carpetas del proyecto ha sido modificada para adaptarla a las necesidades del portal personalizado. A continuación se detalla la nueva estructura:
 
 ```
-├── public/
-│   └── ...
 └── src/
     ├── components/
     │   └── ...
@@ -24,54 +30,69 @@ Inside your project, you'll see the following directory structure:
         └── ...
 ```
 
-- `src/routes`: Provides the directory based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
+En la carpeta `src/components/` se encuentran los componentes utilizados para construir la interfaz del portal. Esta carpeta puede ser modificada según las necesidades específicas del proyecto, permitiendo agregar, eliminar o modificar componentes.
 
-- `src/components`: Recommended directory for components.
+En la carpeta `src/routes/` se definen las rutas del portal, es decir, las URL y las correspondientes acciones asociadas a ellas. Aquí también se pueden realizar modificaciones y agregar nuevas rutas según los requisitos del proyecto.
 
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
+## Desarrollo ✏️
 
-## Add Integrations and deployment
+El desarrollo del portal personalizado ha sido creado por Ameth Galarcio, quien aprovechó los módulos ya existentes del proyecto original para construir la versión personalizada. Esto significa que se utilizaron como base los componentes y funcionalidades proporcionados en el proyecto original, pero se realizaron modificaciones y adaptaciones para cumplir con los requisitos específicos del portal personalizado.[Proyecto Original](https://github.com/codigoencasa/bot-whatsapp). 
 
-Use the `npm run qwik add` command to add additional integrations. Some examples of integrations include: Cloudflare, Netlify or Express server, and the [Static Site Generator (SSG)](https://qwik.builder.io/qwikcity/static-site-generation/static-site-config/).
+## Build project 🚀
 
-```shell
-npm run qwik add # or `yarn qwik add`
-```
-
-## Development
-
-Development mode uses [Vite's development server](https://vitejs.dev/). During development, the `dev` command will server-side render (SSR) the output.
+Para compilar el proyecto y generar la versión de producción, se utiliza el comando `npm run build.full.` Este comando genera dos carpetas:
 
 ```shell
-npm start # or `yarn start`
+npm run build.full # or `yarn build.full`
 ```
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+- `./dist/`: Contiene todos los archivos y recursos necesarios para la visualización del proyecto. Aquí se encuentran los archivos HTML, CSS, JavaScript y otros recursos estáticos.
 
-## Preview
+- `./lib/`: Contiene el archivo `portal.http.csj`, el cual es utilizado por el bot para enviar imágenes al portal. Esta carpeta es importante para la integración del portal con el bot de WhatsApp.
 
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to locally preview a production build, and it should not be used as a production server.
+## Integración con el bot de WhatsApp 🔢
 
-```shell
-npm run preview # or `yarn preview`
-```
-
-## Production
-
-The production build will generate client and server modules by running both client and server build commands. Additionally, the build command will use Typescript to run a type check on the source code.
-
-```shell
-npm run build # or `yarn build`
-```
-
-## Static Site Generator (Node.js)
+Para integrar el portal personalizado con el bot de WhatsApp, se recomienda crear una carpeta independiente con un nombre descriptivo. En este ejemplo, la carpeta se llama "portalWeb":
 
 ```
-npm run build.server
+└── portalWeb/
+   ├── dist/
+   │   └── ...
+   └── lib/
+        └── ...
 ```
 
-## Static Site Generator (Node.js)
+Luego, se debe instalar la librería del portal personalizado utilizando el comando `npm install file:portalWeb`. Esto permitirá importar y utilizar la librería en el bot de WhatsApp.
 
+Es importante destacar que, debido a los cambios realizados en el portal personalizado, ya no se utilizará la siguiente línea de código para importar la librería:
+
+```js
+const QRPortalWeb = require("@ameth1208/portal-qr");
 ```
-npm run build.server
+
+```js
+const main = async () => {
+  const adapterDB = new DataBaseAdapter();
+  const adapterFlow = createFlow([flowPrincipal, flowRegister, flowGracias]);
+  const adapterProvider = createProvider(WProvider);
+
+  createBot({
+    flow: adapterFlow,
+    provider: adapterProvider,
+    database: adapterDB,
+  });
+
+  QRPortalWeb();
+};
 ```
+
+Con la nueva estructura y la instalación de la librería desde la carpeta local, se debe ajustar la importación y el uso del portal personalizado en el bot de WhatsApp según las necesidades específicas del proyecto.
+
+--- 
+
+<p align="center" 
+     >
+   <img style={ width="120"; height="150"; object-fit: contain;} src="https://i.imgur.com/Oauef6t.png">
+  <img style={ width="100"; height="150"; object-fit: contain;} src="https://gamma-studio-web.web.app/assets/gs3d.svg">
+
+</p>

@@ -11,11 +11,7 @@ export default component$(() => {
                     <Slot />
                 </section>
             </main>
-            {/* <footer>
-                <a href="https://qwik.builder.io/" target="_blank">
-                    Made with <strong>Qwik</strong>
-                </a>
-            </footer> */}
+          
         </>
     )
 })

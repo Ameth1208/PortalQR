@@ -20,21 +20,7 @@ export default component$(() => {
           permisos necesarios a nuestro bot para que empiece a trabajar de
           manera eficaz y personalizada en tu ambiente empresarial.
         </p>
-        {/* <div class={'qr-section links'}>
-                    <a class={'btn-link '} target="_blank" href="https://bot-whatsapp.netlify.app/">
-                        Ver documentación
-                    </a>
-                    <a
-                        class={'btn-link '}
-                        target="_blank"
-                        href="https://www.youtube.com/playlist?list=PL_WGMLcL4jzWPhdhcUyhbFU6bC0oJd2BR"
-                    >
-                        Ver videos
-                    </a>
-                    <a class={'btn-link '} target="_blank" href="https://opencollective.com/bot-whatsapp">
-                        Comprar café
-                    </a>
-                </div> */}
+        
       </div>
     </div>
   );
