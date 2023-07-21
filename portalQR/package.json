@@ -38,7 +38,8 @@
   "scripts": {
     "build": "qwik build",
     "build.client": "vite build",
-    "build.full": "md portalQR && qwik build && rollup --config ./rollup-portal.config.js && copy package.json portalQR\\package.json && move dist portalQR\\ && move lib portalQR\\",
+    "build.fullmd": "md portalQR && qwik build && rollup --config ./rollup-portal.config.js && copy package.json portalQR\\package.json && move dist portalQR\\ && move lib portalQR\\",
+    "build.full": "qwik build && rollup --config ./rollup-portal.config.js",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.server": "vite build -c adaptors/static/vite.config.ts",
     "build.types": "tsc --incremental --noEmit",

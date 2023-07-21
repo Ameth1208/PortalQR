@@ -1,0 +1,1 @@
+import{c as t,T as e,_ as o}from"./q-80a093d9.js";const _=t(e(()=>o(()=>import("./q-f595ec4a.js"),["build/q-f595ec4a.js","build/q-80a093d9.js"]),"s_R1EuIcaSubc")),c={title:"📊 WhatBot QR",meta:[{name:"description",content:"📊 WhatBot QR"}]};export{_ as default,c as head};
