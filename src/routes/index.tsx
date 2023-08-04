@@ -2,7 +2,6 @@ import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { QR } from "~/components/qr/qr";
 
-import logo from "./../components/icons/logo.svg";
 import style from "./index.css?inline";
 import { BotLogo } from "~/components/icons/bot";
 
