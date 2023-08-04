@@ -9,6 +9,7 @@ export default component$(() => {
                 <Header />
                 <section>
                     <Slot />
+                    
                 </section>
             </main>
           
