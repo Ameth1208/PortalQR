@@ -1,12 +1,11 @@
 div img {
-    display: block;
+    display: flex;
     background-color: #f0f0f0;
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     object-fit: contain;
     border-radius: 10px;
-}
-div {
-    display: flex;
-    justify-content: center;
+
 }

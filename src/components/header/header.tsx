@@ -9,14 +9,15 @@ export default component$(() => {
     <header>
       <div class="logo">
         <a
-          href="https://gamma-studio-web.web.app/"
+          href=""
           target="_blank"
           title="qwik"
         >
           <BotLogo />
         </a>
       </div>
-      <ul>
+
+      {/* <ul>
         <li>
           <img
             src="https://www.freepnglogos.com/uploads/logo-ig-png/logo-ig-instagram-new-logo-vector-download-13.png"
@@ -25,7 +26,7 @@ export default component$(() => {
             height={20}
           />
           <a
-            href="https://instagram.com/ameth12_08?igshid=NGExMmI2YTkyZg=="
+            href="https://instagram.com/bebidasmas?igshid=MzRlODBiNWFlZA=="
             target="_blank"
           >
             Instagram
@@ -40,13 +41,13 @@ export default component$(() => {
             
           />
           <a
-            href="https://instagram.com/ameth12_08?igshid=NGExMmI2YTkyZg=="
+            href="https://www.facebook.com/bebidasmas?mibextid=ZbWKwL"
             target="_blank"
           >
             Facebook
           </a>
         </li>
-      </ul>
+      </ul> */}
     </header>
   );
 });

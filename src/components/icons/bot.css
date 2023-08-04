@@ -1,21 +1,28 @@
 .logo {
+    width: auto;
     display: flex;
     gap: 0.5rem;
     align-items: center;
-    align-content: center;
-    color: white;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .logo h1 {
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 700;
     margin: 0;
+}
+
+.logo .icon {
+    background-color: #253e81;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
 }
 
 
 .logo img {
-
     object-fit: contain;
-
 
 }
