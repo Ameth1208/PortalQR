@@ -36,7 +36,7 @@ En la carpeta `src/routes/` se definen las rutas del portal, es decir, las URL y
 
 ## Desarrollo ✏️
 
-El desarrollo del portal personalizado ha sido creado por Ameth Galarcio, quien aprovechó los módulos ya existentes del proyecto original para construir la versión personalizada. Esto significa que se utilizaron como base los componentes y funcionalidades proporcionados en el proyecto original, pero se realizaron modificaciones y adaptaciones para cumplir con los requisitos específicos del portal personalizado.[Proyecto Original](https://github.com/codigoencasa/bot-whatsapp). 
+El desarrollo del portal personalizado ha sido creado por Ameth Galarcio, quien aprovechó los módulos ya existentes del proyecto original para construir la versión personalizada. Esto significa que se utilizaron como base los componentes y funcionalidades proporcionados en el proyecto original, pero se realizaron modificaciones y adaptaciones para cumplir con los requisitos específicos del portal personalizado.[Proyecto Original](https://github.com/codigoencasa/bot-whatsapp).
 
 ## Build project 🚀
 
@@ -88,11 +88,11 @@ const main = async () => {
 
 Con la nueva estructura y la instalación de la librería desde la carpeta local, se debe ajustar la importación y el uso del portal personalizado en el bot de WhatsApp según las necesidades específicas del proyecto.
 
---- 
+---
 
 <p align="center" 
      >
    <img style={ width="120"; height="150"; object-fit: contain;} src="https://i.imgur.com/Oauef6t.png">
-  <img style={ width="100"; height="150"; object-fit: contain;} src="https://gamma-studio-web.web.app/assets/gs3d.svg">
+<a href ="https://amethgalarcio.web.app/"><img style={ width="100"; height="150"; object-fit: contain;} src="https://gamma-studio-web.web.app/assets/gs3d.svg"></a>
 
 </p>
