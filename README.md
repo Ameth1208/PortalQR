@@ -2,23 +2,25 @@
 
 - [Insgram](https://instagram.com/ameth12_08?igshid=NGExMmI2YTkyZg==) un Follow para apoyar ⭐
 
+- [Portafolio Web 🧑🏽‍💼](https://amethgalarcio.web.app/)
+
 - [GitHub](https://github.com/Ameth1208/) GitHub personal.
 
-- [Qwik Docs](https://qwik.builder.io/)
+- [Qwik Docs 📃](https://qwik.builder.io/)
 
 - [Qwik GitHub](https://github.com/BuilderIO/qwik)
 
 - [@QwikDev](https://twitter.com/QwikDev)
 
-- [Vite](https://vitejs.dev/)
+- [Vite ](https://vitejs.dev/)
 
 ---
 
-## Example:
+##### Example:
 
-![](https://github.com/Ameth1208/PortalQR/blob/main/.github/webPortal.png)
+![](./webPortal.png)
 
-## Estructura
+##### Estructura
 
 La estructura de carpetas del proyecto ha sido modificada para adaptarla a las necesidades del portal personalizado. A continuación se detalla la nueva estructura:
 
@@ -34,13 +36,25 @@ En la carpeta `src/components/` se encuentran los componentes utilizados para co
 
 En la carpeta `src/routes/` se definen las rutas del portal, es decir, las URL y las correspondientes acciones asociadas a ellas. Aquí también se pueden realizar modificaciones y agregar nuevas rutas según los requisitos del proyecto.
 
-## Desarrollo ✏️
+##### Desarrollo ✏️
 
 El desarrollo del portal personalizado ha sido creado por Ameth Galarcio, quien aprovechó los módulos ya existentes del proyecto original para construir la versión personalizada. Esto significa que se utilizaron como base los componentes y funcionalidades proporcionados en el proyecto original, pero se realizaron modificaciones y adaptaciones para cumplir con los requisitos específicos del portal personalizado.[Proyecto Original](https://github.com/codigoencasa/bot-whatsapp).
 
-## Build project 🚀
+##### Build project 🚀
 
-Para compilar el proyecto y generar la versión de producción, se utiliza el comando `npm run build.full.` Este comando genera dos carpetas:
+###### Clonar repositorio:
+
+```git
+git clone https://github.com/Ameth1208/PortalQR.git
+```
+
+###### Instalar dependencias:
+
+```shell
+npm i
+```
+
+Para compilar el proyecto y generar la versión de producción, se utiliza el comando `npm run build.full.` Este comando genera una carpeta llamada `portalQR`:
 
 ```shell
 npm run build.full # or `yarn build.full`
@@ -50,25 +64,56 @@ npm run build.full # or `yarn build.full`
 
 - `./lib/`: Contiene el archivo `portal.http.csj`, el cual es utilizado por el bot para enviar imágenes al portal. Esta carpeta es importante para la integración del portal con el bot de WhatsApp.
 
-## Integración con el bot de WhatsApp 🔢
-
-Para integrar el portal personalizado con el bot de WhatsApp, se recomienda crear una carpeta independiente con un nombre descriptivo. En este ejemplo, la carpeta se llama "portalWeb":
+###### Integración con el bot de WhatsApp 🔢
 
 ```
-└── portalWeb/
-   ├── dist/
-   │   └── ...
-   └── lib/
-        └── ...
+packages
+    └── portalQR/
+       ├── dist/
+       │       └── ...
+       │  
+       ├──lib/
+       │     └── ...
+       └── packages.json    
 ```
 
-Luego, se debe instalar la librería del portal personalizado utilizando el comando `npm install file:portalWeb`. Esto permitirá importar y utilizar la librería en el bot de WhatsApp.
+crea una carpeta dentro del proyecto del bot, llamada `packages` y pega aqui la  carpeta **portalQR**, para luego instala el paquete asi.
 
-Es importante destacar que, debido a los cambios realizados en el portal personalizado, ya no se utilizará la siguiente línea de código para importar la librería:
+###### Metodo 1
+
+```shell
+npm i file:packages/portalQR
+```
+
+Si usas este metodo, tienes que colocar en el codigo del bot
 
 ```js
 const QRPortalWeb = require("@ameth1208/portal-qr");
 ```
+
+###### Metodo 2:
+
+o cambia en el package.json del bot la linea donde esta el portal
+
+```shell
+  "@bot-whatsapp/portal": "file:src/packages/portalQR",
+```
+
+borra los `node_modules`
+
+```shell
+  npm i 
+```
+
+queda igual como lo tienes actualmente
+
+```js
+const QRPortalWeb = require("@bot-whatsapp/portal");
+```
+
+###### QRPortalWeb()
+
+solo se actualizo la interfaz, cada vez que cambies la interfaz tendras que repetir el proceso, pero igual permite una personalizacion completa
 
 ```js
 const main = async () => {
@@ -85,8 +130,6 @@ const main = async () => {
   QRPortalWeb();
 };
 ```
-
-Con la nueva estructura y la instalación de la librería desde la carpeta local, se debe ajustar la importación y el uso del portal personalizado en el bot de WhatsApp según las necesidades específicas del proyecto.
 
 ---
 
