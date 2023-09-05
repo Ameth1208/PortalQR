@@ -3,19 +3,17 @@
     gap: 0.5rem;
     align-items: center;
     align-content: center;
-    color: white;
+    flex-direction: column;
 }
 
 .logo h1 {
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0;
 }
 
 
 .logo img {
-
     object-fit: contain;
-
 
 }

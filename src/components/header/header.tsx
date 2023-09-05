@@ -9,44 +9,13 @@ export default component$(() => {
     <header>
       <div class="logo">
         <a
-          href="https://gamma-studio-web.web.app/"
+          href="https://amethgalarcio.web.app/"
           target="_blank"
-          title="qwik"
+          title="gamastudio"
         >
           <BotLogo />
         </a>
       </div>
-      <ul>
-        <li>
-          <img
-            src="https://www.freepnglogos.com/uploads/logo-ig-png/logo-ig-instagram-new-logo-vector-download-13.png"
-            alt=""
-            width={20}
-            height={20}
-          />
-          <a
-            href="https://instagram.com/ameth12_08?igshid=NGExMmI2YTkyZg=="
-            target="_blank"
-          >
-            Instagram
-          </a>
-        </li>
-        <li>
-          <img
-            src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-file-facebook-icon-svg-wikimedia-commons-4.png"
-            alt=""
-            width={20}
-            height={20}
-            
-          />
-          <a
-            href="https://instagram.com/ameth12_08?igshid=NGExMmI2YTkyZg=="
-            target="_blank"
-          >
-            Facebook
-          </a>
-        </li>
-      </ul>
     </header>
   );
 });

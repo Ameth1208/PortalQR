@@ -2,18 +2,20 @@ import { component$, useStylesScoped$ } from "@builder.io/qwik";
 
 import styles from "./bot.css?inline";
 
-import "./logo.png";
+
+//Logo se puede reemplazar por lo que sea
+import logo from "./../../assets/logo.png";
 
 export const BotLogo = component$(() => {
   useStylesScoped$(styles);
   return (
     <div class={"logo"}>
       <img
-        width={35}
-        height={35}
-        src="https://gamma-studio-web.web.app/assets/gs3d.svg"
+        width={30}
+        height={30}
+        src={logo}
       />
-      <h1>WhatsApp Bot</h1>
+      <h1>Chat Bot</h1>
     </div>
   );
 });
