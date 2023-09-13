@@ -1,5 +1,5 @@
 const { join } = require("path");
-const { createReadStream, existsSync } = require("fs");
+const { createReadStream, existsSync, readdirSync } = require("fs");
 const { bgYellow, cyan, yellow } = require("kleur");
 const polka = require("polka");
 
@@ -14,6 +14,15 @@ const dir = [join(__dirname, "dist"), join(__dirname, "..", "dist")].find((i) =>
   existsSync(i)
 );
 const serve = require("serve-static")(dir);
+
+const findQrFile = (dir) => {
+  try {
+    const files = readdirSync(dir);
+    return files.find((file) => /\.qr\.png$/.test(file));
+  } catch (e) {
+    return null;
+  }
+};
 
 /**
  * Iniciamos Portal WEB para escanear QR
@@ -46,18 +55,29 @@ const start = (args) => {
   polka()
     .use(serve)
     .get("qr.png", (_, res) => {
-      const qrSource = [
-        join(process.cwd(), `${name}.qr.png`),
-        join(__dirname, "..", `${name}.qr.png`),
-        join(__dirname, `${name}.qr.png`),
-      ].find((i) => existsSync(i));
+      //Modificancion 2
+      const directories = [process.cwd(), join(__dirname, ".."), __dirname];
 
-      const qrMark = [
-        join(__dirname, "dist", "water-mark.png"),
-        join(__dirname, "..", "dist", "water-mark.png"),
-      ].find((i) => existsSync(i));
+      let qrSource;
 
-      const fileStream = createReadStream(qrSource ?? qrMark);
+      for (let dir of directories) {
+        const qrFile = findQrFile(dir);
+        if (qrFile) {
+          qrSource = join(dir, qrFile);
+          break;
+        }
+      }
+
+      if (!qrSource) {
+        const qrMark = [
+          join(__dirname, "dist", "water-mark.png"),
+          join(__dirname, "..", "dist", "water-mark.png"),
+        ].find((i) => existsSync(i));
+
+        qrSource = qrMark;
+      }
+
+      const fileStream = createReadStream(qrSource);
 
       res.writeHead(200, { "Content-Type": "image/png" });
       fileStream.pipe(res);
