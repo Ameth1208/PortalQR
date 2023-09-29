@@ -18,7 +18,7 @@
 
 ##### Example:
 
-![](./webPortal.png)
+![](./resources/webPortal.png)
 
 ##### Estructura
 
@@ -77,7 +77,7 @@ packages
        └── packages.json    
 ```
 
-crea una carpeta dentro del proyecto del bot, llamada `packages` y pega aqui la  carpeta **portalQR**, para luego instala el paquete asi.
+crea una carpeta dentro del proyecto del bot, llamada `packages` y pega aqui la carpeta **portalQR**, para luego instala el paquete asi.
 
 ###### Metodo 1
 
@@ -102,7 +102,7 @@ o cambia en el package.json del bot la linea donde esta el portal
 borra los `node_modules`
 
 ```shell
-  npm i 
+  npm i
 ```
 
 queda igual como lo tienes actualmente
